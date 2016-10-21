@@ -25,7 +25,7 @@ function LunchCheckController($scope) {
     {$scope.msg = "Enjoy!";}
     else if (count >= 4)
     {$scope.msg = "Too much!";}
-    else $scope.msg = "";
+    else $scope.msg = "Please enter data first";
     
   };
 }
