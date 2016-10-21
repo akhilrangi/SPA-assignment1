@@ -12,13 +12,21 @@ function LunchCheckController($scope) {
   $scope.msg = "";
 
   $scope.check = function () {
-    var str = $scope.dishes.split(',');
-    var count = str.length;
+    var str = $scope.dishes;
+    var count = 0;
+    
+    if(str != null && str != undefined && str != '')
+    {
+      str = str.split(',');
+      count = str.length;
+    }
     
     if (count >= 1 && count <= 3)
     {$scope.msg = "Enjoy!";}
     else if (count >= 4)
     {$scope.msg = "Too much!";}
+    
   };
 }
 })();
+
